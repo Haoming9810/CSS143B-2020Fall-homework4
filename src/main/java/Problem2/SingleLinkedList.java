@@ -64,11 +64,12 @@ public class SingleLinkedList {
     }
 
     public int getSize() {
+
         return size;
     }
 
     // reverse the linked list RECURSIVELY
     public void reverse() {
-        // homework
+
     }
 }
