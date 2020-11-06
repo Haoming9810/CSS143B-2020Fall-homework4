@@ -1,7 +1,8 @@
 package Problem2;
 
 public class SingleLinkedList {
-    private ListNode head;
+
+    private static ListNode head;
     private int size;
 
     public ListNode getHead() {
@@ -69,7 +70,16 @@ public class SingleLinkedList {
     }
 
     // reverse the linked list RECURSIVELY
-    public void reverse() {
+    public static void reverse() {
+        ListNode reverse ;
 
+    }
+    private static ListNode reverse(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode p = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
     }
 }
