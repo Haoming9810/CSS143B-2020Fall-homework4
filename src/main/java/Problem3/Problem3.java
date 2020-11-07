@@ -8,11 +8,17 @@ import java.io.PrintStream;
 public class Problem3 {
     public static void printListInReverse(ListNode list, PrintStream print) {
         ListNode ptr = list.next;
-        if(list==null){
+        if (list == null) 
             return;
-        }
-        printListInReverse(ListNode.getNext());
-        print.println(ListNode.getData() + " " );
+
+        // print list of head node 
+       // ptr= ptr.next;
+       // printListInReverse(ptr);
+
+        // After everything else is printed 
+        print.println(list);
     }
-    }
+
+
 }
+
