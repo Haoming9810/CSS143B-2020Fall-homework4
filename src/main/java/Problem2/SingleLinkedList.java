@@ -20,6 +20,7 @@ public class SingleLinkedList {
         }
         ListNode ptr = head;
         for (int datum : data) {
+            System.out.println(datum);
             ptr.next = new ListNode(datum);
             ptr = ptr.next;
             size++;
@@ -71,8 +72,7 @@ public class SingleLinkedList {
 
     // reverse the linked list RECURSIVELY
     public static void reverse() {
-        ListNode reverse ;
-
+        reverse(head);
     }
     private static ListNode reverse(ListNode head) {
         if (head == null || head.next == null)

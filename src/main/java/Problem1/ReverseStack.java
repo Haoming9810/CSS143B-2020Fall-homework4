@@ -20,17 +20,13 @@ public class ReverseStack {
 
     private static void insert_at_bottom(Stack<Integer> stack, int x) {
 
-        //check if stack is empty
         if (stack.isEmpty()) {
             stack.push(x);
             return;
         }
-        //take out the existing items in stack and keep it in function stack
         int y = stack.pop();
-        //push x to the bottom
         insert_at_bottom(stack, x);
 
-        //push back all the items from function stack to stack
         stack.push(y);
     }
 }

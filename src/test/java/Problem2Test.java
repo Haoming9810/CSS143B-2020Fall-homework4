@@ -213,7 +213,11 @@ public class Problem2Test {
 
         for (int i = 0; i < list1.length; i++) {
             SingleLinkedList l1 = new SingleLinkedList(list1[i]);
+            System.out.println(l1);
             SingleLinkedList l2 = new SingleLinkedList(list2[i]);
+
+            System.out.println(l2);
+            System.out.println(expect[i]);
             TestUtils.assertSingleLinkedListBothWays(l1, l2, expect[i], i);
         }
     }

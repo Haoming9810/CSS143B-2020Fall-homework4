@@ -37,6 +37,8 @@ public class Problem3Test {
 
             Problem3.printListInReverse(TestUtils.arrayToListWithoutDummy(inputs[i]), ps);
 
+
+
             String tmp = baos.toString().replace("\n", " ").replace("\r", "").trim();
             if (inputs[i].length != 0) {
                 int[] actual = Arrays.stream(tmp.split(" ")).mapToInt(Integer::parseInt).toArray();
