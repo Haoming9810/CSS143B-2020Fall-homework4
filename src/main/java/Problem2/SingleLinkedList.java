@@ -1,7 +1,8 @@
 package Problem2;
 
 public class SingleLinkedList {
-    private ListNode head;
+
+    private static ListNode head;
     private int size;
 
     public ListNode getHead() {
@@ -19,6 +20,7 @@ public class SingleLinkedList {
         }
         ListNode ptr = head;
         for (int datum : data) {
+            System.out.println(datum);
             ptr.next = new ListNode(datum);
             ptr = ptr.next;
             size++;
@@ -64,11 +66,20 @@ public class SingleLinkedList {
     }
 
     public int getSize() {
+
         return size;
     }
 
     // reverse the linked list RECURSIVELY
-    public void reverse() {
-        // homework
+    public static void reverse() {
+        reverse(head);
+    }
+    private static ListNode reverse(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode p = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
     }
 }
